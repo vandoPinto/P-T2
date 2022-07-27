@@ -15,9 +15,48 @@
         <p>Clique
             nas imagens e conheça esses equipamentos.</p>
         <div style="margin-top: 53px;margin-left: 148px;display: flex;justify-content: space-between;width: 450px;">
-            <img src="recursos/imgs/computador.svg" style="width: 100px;">
-            <img src="recursos/imgs/balanca.svg" style="width: 98px;">
-            <img src="recursos/imgs/phmetro.svg" style="width: 98px;">
+            <img id="botao_1" src="recursos/imgs/computador.svg" style="width: 100px; cursor: pointer;">
+            <img id="botao_2" src="recursos/imgs/balanca.svg" style="width: 98px; cursor: pointer;">
+            <img id="botao_3" src="recursos/imgs/phmetro.svg" style="width: 98px; cursor: pointer;">
+        </div>
+        <div>
+            <div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+                <div
+                    style="width: 743px;height: 132px;background: #1B8992 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;position: absolute;top: 247px;left: 70px;border-radius: 10px;">
+                    <div style="width: 689px;">
+                        <p style="font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">Estruturas de
+                            organização do espaço e registro de informações, como mesas, computadores, materiais de
+                            escritório,
+                            armários.</p>
+                    </div>
+                    <p style="font-size: 13px;color: white;position: absolute;top: 0px;left: 720px;">X</p>
+                </div>
+            </div>
+            <div id="janela_2" class="jan" style="cursor: pointer; display: none;">
+                <div
+                    style="width: 743px;height: 132px;background: #1B8992 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;position: absolute;top: 247px;left: 70px;border-radius: 10px;">
+                    <div style="width: 689px;">
+                        <p style="font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">Materiais destinados
+                            ao
+                            preparo dos fitoterápicos, como moinhos, extratores, vidrarias diversas, equipamentos de
+                            pesagem, embalagens e rótulos para matérias-primas e para os fitoterápicos.</p>
+                    </div>
+                    <p style="font-size: 13px;color: white;position: absolute;top: 0px;left: 720px;">X</p>
+                </div>
+            </div>
+            <div id="janela_3" class="jan" style="cursor: pointer; display: none;">
+                <div
+                    style="width: 743px;height: 132px;background: #1B8992 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;position: absolute;top: 247px;left: 70px;border-radius: 10px;">
+                    <div style="width: 689px;">
+                        <p style="font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">No controle de
+                            qualidade, há os equipamentos necessários à realização dos testes básicos, como
+                            vidrarias,
+                            estufas,
+                            pHmetro, espectrofotômetro e outros a depender da complexidade das análises.</p>
+                    </div>
+                    <p style="font-size: 13px;color: white;position: absolute;top: 0px;left: 720px;">X</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -30,7 +69,6 @@
     $(() => {
         let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
         apagarJanelas();
-        $(document).find('[id=janela_1]').show();
         $(document).find('[id^=btn]').hide();
         let botoes = $(document).find('[id^=botao]').map((index, botao) => {
             $(botao).css('cursor', 'pointer');
