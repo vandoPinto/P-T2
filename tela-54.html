@@ -4,59 +4,27 @@
             2</strong></p>
     <p
         style="position: absolute;font: normal normal normal 11px/15px Poppins;letter-spacing: 0px;color: #294666;margin-left: 112px;margin-top: 25px;width: 440px;">
-        IMPLANTAÇÃO DAS PICS NAS UNIDADES BÁSICAS DE SAÚDE: ESTRUTURA E INSUMOS</p>
+        IMPLANTAÇÃO DAS PIS NAS UNIDADES BÁSICAS DE SAÚDE: ESTRUTURA E INSUMOS</p>
 </div>
 <div>
-    <div style="margin-left: 52px;margin-top: 54px;width: 785px;">
-        <p>Na referida norma, há uma lista dos equipamentos básicos destinados à melhor realização das operações
-            farmacêuticas de
-            produção de fitoterápicos. A presença e a quantidade desses equipamentos dependerão da complexidade da
-            produção.</p>
-        <p>Clique
-            nas imagens e conheça esses equipamentos.</p>
-        <div style="margin-top: 53px;margin-left: 148px;display: flex;justify-content: space-between;width: 450px;">
-            <img id="botao_1" src="recursos/imgs/computador.svg" style="width: 100px; cursor: pointer;">
-            <img id="botao_2" src="recursos/imgs/balanca.svg" style="width: 98px; cursor: pointer;">
-            <img id="botao_3" src="recursos/imgs/phmetro.svg" style="width: 98px; cursor: pointer;">
+    <div style="display: flex;">
+        <div style="width: 343px;margin-left: 58px;margin-top: 44px;">
+            <p style="font: normal normal bold 20px/30px Poppins;color: #FFA800;">Produção de fitoterápicos</p>
+            <p>No processo mais sofisticado da produção, chegamos até o fitoterápico. Nesse caso,
+                precisamos de uma estrutura mais
+                ampla e que respeite as normas sanitárias para a produção e o controle de qualidade de medicamentos
+                fitoterápicos. </p>
+            <p>A
+                normativa-mãe a ser seguida é a RDC nº 18/2013, que dispõe sobre as boas práticas de processamento e
+                armazenamento de
+                plantas medicinais, preparação e dispensação de produtos magistrais e oficinais de plantas
+                medicinais e fitoterápicos em
+                farmácias vivas no âmbito do SUS.</p>
         </div>
-        <div>
-            <div id="janela_1" class="jan" style="cursor: pointer; display: none;">
-                <div
-                    style="width: 743px;height: 132px;background: #1B8992 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;position: absolute;top: 247px;left: 70px;border-radius: 10px;">
-                    <div style="width: 689px;">
-                        <p style="font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">Estruturas de
-                            organização do espaço e registro de informações, como mesas, computadores, materiais de
-                            escritório,
-                            armários.</p>
-                    </div>
-                    <p style="font-size: 13px;color: white;position: absolute;top: 0px;left: 720px;">X</p>
-                </div>
-            </div>
-            <div id="janela_2" class="jan" style="cursor: pointer; display: none;">
-                <div
-                    style="width: 743px;height: 132px;background: #1B8992 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;position: absolute;top: 247px;left: 70px;border-radius: 10px;">
-                    <div style="width: 689px;">
-                        <p style="font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">Materiais destinados
-                            ao
-                            preparo dos fitoterápicos, como moinhos, extratores, vidrarias diversas, equipamentos de
-                            pesagem, embalagens e rótulos para matérias-primas e para os fitoterápicos.</p>
-                    </div>
-                    <p style="font-size: 13px;color: white;position: absolute;top: 0px;left: 720px;">X</p>
-                </div>
-            </div>
-            <div id="janela_3" class="jan" style="cursor: pointer; display: none;">
-                <div
-                    style="width: 743px;height: 132px;background: #1B8992 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;position: absolute;top: 247px;left: 70px;border-radius: 10px;">
-                    <div style="width: 689px;">
-                        <p style="font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">No controle de
-                            qualidade, há os equipamentos necessários à realização dos testes básicos, como
-                            vidrarias,
-                            estufas,
-                            pHmetro, espectrofotômetro e outros a depender da complexidade das análises.</p>
-                    </div>
-                    <p style="font-size: 13px;color: white;position: absolute;top: 0px;left: 720px;">X</p>
-                </div>
-            </div>
+        <div class="animate__animated animate__backInRight">
+            <img src="recursos/imgs/img-slide-52.jpg" style="width: 400px;margin-left: 42px;margin-top: 57px;">
+            <p style="font: normal normal normal 10px/18px Poppins;margin-left: 274px;">Foto: Mariana Raphael/Saúde-DF
+            </p>
         </div>
     </div>
 </div>
@@ -65,28 +33,3 @@
         <p style="color: #294666;font-size: 11px;">GESTÃO DA APS E PRÁTICAS INTEGRATIVAS EM SAÚDE</p>
     </div>
 </footer>
-<script>
-    $(() => {
-        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
-        apagarJanelas();
-        $(document).find('[id^=btn]').hide();
-        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
-            $(botao).css('cursor', 'pointer');
-            $(botao).hover(() => {
-                $(document).find(`[id=btn_${index + 1}_2]`).show();
-            });
-            $(botao).mouseleave(() => {
-                $(document).find('[id^=btn]').hide();
-            });
-            $(botao).click(() => {
-                apagarJanelas();
-                $(janelas[index]).fadeIn();
-            })
-        })
-        function apagarJanelas() {
-            janelas.map((index, janela) => {
-                $(janela).hide();
-            })
-        }
-    })
-</script>

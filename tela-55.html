@@ -4,26 +4,59 @@
             2</strong></p>
     <p
         style="position: absolute;font: normal normal normal 11px/15px Poppins;letter-spacing: 0px;color: #294666;margin-left: 112px;margin-top: 25px;width: 440px;">
-        IMPLANTAÇÃO DAS PICS NAS UNIDADES BÁSICAS DE SAÚDE: ESTRUTURA E INSUMOS</p>
+        IMPLANTAÇÃO DAS PIS NAS UNIDADES BÁSICAS DE SAÚDE: ESTRUTURA E INSUMOS</p>
 </div>
-<div style="margin-top: 58px;margin-left: 63px;width: 785px;">
-    <div class="animate__animated animate__backInRight"
-        style="margin-top: 107px;margin-left: 85px;display: flex;flex-direction: row;width: 616px;height: 167px;top: 139px;right: 148px;background-color: #FFF2D9;border-radius: 10px;">
-        <img src="recursos/imgs/saibaMais.svg" style="width: 48px;height: 45px;margin-top: 33px;margin-left: 17px;">
-        <div style="display: initial;margin-left: 21px;width: 506px;">
-            <p style="font-weight: bold;color: #294666;font-size: 15px;">SAIBA MAIS</p>
-            <p style="font-size: 12px;">Para conhecer mais a fundo a estruturação de uma farmácia viva, leia a RDC
-                nº 18/2013, disponível em:
-                <a href="https://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2013/rdc0018_03_04_2013.pdf" target="_blank"
-                    style="color: #0F77F9;">https://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2013/<br>rdc0018_03_04_2013.pdf</a>.
-            </p>
-            <p style="font-size: 12px;margin-top: -6px;margin-left: -72px;">Há vários exemplos de sucesso de
-                farmácias vivas pelo
-                Brasil. Convidamos você
-                para conhecer as duas unidades do
-                Distrito
-                Federal no link <a href="https://www.saude.df.gov.br/farmacias-vivas-fitoterapicos/" target="_blank"
-                    style="color: #0F77F9;">https://www.saude.df.gov.br/farmacias-vivas-<br>fitoterapicos/</a>.</p>
+<div>
+    <div style="margin-left: 52px;margin-top: 54px;width: 785px;">
+        <p>Na referida norma, há uma lista dos equipamentos básicos destinados à melhor realização das operações
+            farmacêuticas de
+            produção de fitoterápicos. A presença e a quantidade desses equipamentos dependerão da complexidade da
+            produção.</p>
+        <p>Clique
+            nas imagens e conheça esses equipamentos.</p>
+        <div style="margin-top: 53px;margin-left: 148px;display: flex;justify-content: space-between;width: 450px;">
+            <img id="botao_1" src="recursos/imgs/computador.svg" style="width: 100px; cursor: pointer;">
+            <img id="botao_2" src="recursos/imgs/balanca.svg" style="width: 98px; cursor: pointer;">
+            <img id="botao_3" src="recursos/imgs/phmetro.svg" style="width: 98px; cursor: pointer;">
+        </div>
+        <div>
+            <div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+                <div
+                    style="width: 743px;height: 132px;background: #1B8992 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;position: absolute;top: 247px;left: 70px;border-radius: 10px;">
+                    <div style="width: 689px;">
+                        <p style="font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">Estruturas de
+                            organização do espaço e registro de informações, como mesas, computadores, materiais de
+                            escritório,
+                            armários.</p>
+                    </div>
+                    <p style="font-size: 13px;color: white;position: absolute;top: 0px;left: 720px;">X</p>
+                </div>
+            </div>
+            <div id="janela_2" class="jan" style="cursor: pointer; display: none;">
+                <div
+                    style="width: 743px;height: 132px;background: #1B8992 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;position: absolute;top: 247px;left: 70px;border-radius: 10px;">
+                    <div style="width: 689px;">
+                        <p style="font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">Materiais destinados
+                            ao
+                            preparo dos fitoterápicos, como moinhos, extratores, vidrarias diversas, equipamentos de
+                            pesagem, embalagens e rótulos para matérias-primas e para os fitoterápicos.</p>
+                    </div>
+                    <p style="font-size: 13px;color: white;position: absolute;top: 0px;left: 720px;">X</p>
+                </div>
+            </div>
+            <div id="janela_3" class="jan" style="cursor: pointer; display: none;">
+                <div
+                    style="width: 743px;height: 132px;background: #1B8992 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;position: absolute;top: 247px;left: 70px;border-radius: 10px;">
+                    <div style="width: 689px;">
+                        <p style="font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">No controle de
+                            qualidade, há os equipamentos necessários à realização dos testes básicos, como
+                            vidrarias,
+                            estufas,
+                            pHmetro, espectrofotômetro e outros a depender da complexidade das análises.</p>
+                    </div>
+                    <p style="font-size: 13px;color: white;position: absolute;top: 0px;left: 720px;">X</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -32,3 +65,28 @@
         <p style="color: #294666;font-size: 11px;">GESTÃO DA APS E PRÁTICAS INTEGRATIVAS EM SAÚDE</p>
     </div>
 </footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
